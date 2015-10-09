@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151008162639) do
+ActiveRecord::Schema.define(version: 20151009110720) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -51,11 +51,22 @@ ActiveRecord::Schema.define(version: 20151008162639) do
     t.string   "model"
     t.string   "color"
     t.string   "carcase"
+    t.integer  "year"
     t.decimal  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "cars", ["brand", "model"], name: "index_cars_on_brand_and_model"
+
+  create_table "photos", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.integer  "car_id"
+  end
 
 end
