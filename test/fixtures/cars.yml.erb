@@ -1,0 +1,19 @@
+<%
+  MODELS = {
+    'ford' => ['Cougar', 'Figo', 'Futura'],
+    'toyota' => ['Auris', 'Corolla', 'iQ'],
+    'bmw' => ['X3', 'E60', 'F30']
+  }
+  CARCASES = ['седан', 'пасажирський', 'фургон', 'хетчбек', 'вантажний фургон']
+  COLORS = ['білий', 'чорний', 'срібний', 'синій', 'червоний', 'сірий']
+%>
+
+<% 25.times do |i| %>
+<%= i %>:
+  <% brand = MODELS.keys.sample %>
+  brand: <%= brand %>
+  model: <%= MODELS[brand].sample %>
+  color: <%= COLORS.sample %>
+  carcase: <%= CARCASES.sample %>
+  year: <%= (1960..2015).to_a.sample %>
+<% end %>

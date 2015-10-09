@@ -5,6 +5,7 @@ class CreateCars < ActiveRecord::Migration
       t.string :model
       t.string :color
       t.string :carcase
+      t.integer :year
       t.decimal :price
       t.timestamps null: false
 
