@@ -12,6 +12,7 @@ gem 'turbolinks'
 
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'paperclip'
 
 group :development, :test do
   gem 'byebug'
